@@ -1,0 +1,8 @@
+.div_class1{
+    color: blue;
+    background-color: black;
+    font-size: 40px;
+    /* 가로, 높이 속성은 블록요소만 가능하다 */
+    width: 500px;
+    height: 500px;
+}
