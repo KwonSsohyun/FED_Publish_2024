@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+            font-size: 20px;
+        }
+        .header , .footer{
+            background-color: #fffac1;
+            height: 100px;
+        }
+        .header-logo{
+            height: 60%;
+        }
+
+        .header-nav{
+            height: 40%;
+            background-color: #ffe2c1;
+        }
+        .header-nav-list{
+            display: flex;
+            height:100%;
+            align-items: center;
+        }
+        li{
+            list-style: none;
+            margin-left: 20px;
+        }
+        .main{
+            height: 500px;
+            display: flex;
+        }
+        .aside1, .aside2{
+            width: 20%;
+            background-color: #c1ffd3;
+        }
+        .section{
+            width: 60%;
+            background-color: #c7c1ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-logo">header</div>
+            <div class="header-nav">
+                <ul class="header-nav-list">
+                    <li>메인</li>
+                    <li>회원가입</li>
+                    <li>로그인</li>
+                    <li>상품정보</li>
+                    <li>이번달 특가</li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="aside1">aside1</div>
+            <div class="section">section</div>
+            <div class="aside2">aside2</div>
+        </div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>

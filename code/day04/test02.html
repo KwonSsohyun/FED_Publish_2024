@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            /* 뷰포트의 바깥여백과 안쪽여백을 없애고 시작 */
+            margin: 0;
+            padding: 0;
+        }
+        .main-container{
+            border: 3px solid black;
+            height: 800px;
+        }
+        .header{
+            background-color: beige;
+            /* 부모요소 크기를 기준으로 15%를 차지하겠다. */
+            height: 15%;
+        }
+        .main{
+            background-color: rgb(161, 161, 254);
+            height: 70%;
+        }
+        .footer{
+            background-color: #d37c7c;
+            height: 15%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">header</div>
+        <div class="main">main</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>

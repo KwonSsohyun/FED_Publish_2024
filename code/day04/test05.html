@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+        }
+        .header, .footer{
+            height: 100px;
+            background-color: #ffb3b3;
+        }
+        .main{
+            height: 500px;
+            background-color: #d3ff88;
+        }
+        .header_contents{
+            height: 70px;
+            background-color: #88ffbf;
+        }
+        .nav_list{
+            height: 30px;
+            background-color: #8dcdff;
+            list-style: none;
+            display: flex;
+        }
+        li{
+            width: 80px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-left: 10px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <div class="header_contents"></div>
+            <div class="nav">
+                <ul class="nav_list">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">상품목록</a></li>
+                    <li><a href="#">상품등록</a></li>
+                    <li><a href="#">주문내역</a></li>
+                    <li><a href="#">회원정보</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main"></div>
+        <div class="footer"></div>
+    </div>
+</body>
+</html>

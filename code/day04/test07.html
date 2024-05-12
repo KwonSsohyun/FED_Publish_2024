@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        header{height: 100px; background-color: #d16161; color: #ffffff; font-size: 20px;}
+        .header_text_box{text-align: center; height: 50%;}
+        nav{height: 50%; background-color: steelblue; font-size: 20px;}
+        .nav_list{display: flex; list-style: none;}
+        li{height: 50px; line-height: 50px; margin: 0 10px;}
+        .main_container{display: flex; height: 500px;}
+        /* 주축을 기준으로 중앙 정렬
+            justify-content: center; 
+
+            교차축을 기준으로 중앙 정렬
+           align-items: center; */
+        .aside_1{background-color: #61d17d; width: 200px; color: #000; font-size: 20px; display: flex; justify-content: center; align-items: center;}
+        main{width: 100%; background-color: #cfd161; font-size: 20px;}
+        section{background-color: #8c61d1; margin: 20px auto;}
+        .section01{width: 40%; height: 30%;}
+        .section02{width: 40%; height: 40%;}
+        article{background-color: #61bbd1; margin: auto; display: flex; justify-content: center; align-items: center;}
+        .section01_text_box, .section02_text_box{height: 20%;}
+        .section01_article_container, .section02_article_container{display: flex; width: 100%; height: 80%;}
+        
+        .section02_article_container{flex-wrap: wrap;}
+        .section01_article{width: 35%; height: 60%;}
+        .section02_article{width: 40%; height: 40%;}
+        footer{height: 100px; background-color: #61d1b9; font-size: 20px; display: flex; justify-content: center; align-items: center;}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header_text_box">Header</div>
+        <nav>
+            <ul class="nav_list">
+                <li>nav 메뉴1</li>
+                <li>nav 메뉴2</li>
+                <li>nav 메뉴3</li>
+                <li>nav 메뉴4</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main_container">
+        <aside class="aside_1">
+            <div class="aside_text_box">aside</div>
+        </aside>
+        <main>
+            <div class="main_tsxt_box">Main</div>
+            <section class="section01">
+                <div class="section01_text_box">Section</div>
+                <div class="section01_article_container">
+                    <article class="section01_article">
+                        <div class="article_text_box">Article</div>
+                    </article>
+                    <article class="section01_article">
+                        <div class="article_text_box">Article</div>
+                    </article>
+                    <article class="section01_article">
+                        <div class="article_text_box">Article</div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section02">
+                <div class="section02_text_box">Section</div>
+                <div class="section02_article_container">
+                    <article class="section02_article">
+                        <div class="article_text_box">Article</div>
+                    </article>
+                    <article class="section02_article">
+                        <div class="article_text_box">Article</div>
+                    </article>
+                    <article class="section02_article">
+                        <div class="article_text_box">Article</div>
+                    </article>
+                    <article class="section02_article">
+                        <div class="article_text_box">Article</div>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer_text_box">Footer</div>
+    </footer>
+
+</body>
+</html>

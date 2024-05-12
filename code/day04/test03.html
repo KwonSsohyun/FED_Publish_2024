@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test03</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        /* 적용시킬 css속성이 같다면 선택자 여러개를 ,로 구분 지어서 선택해줄 수 있다. */
+        .header, .footer{
+            background-color: #ffa3a3;
+            height: 100px;
+        }
+        .main{
+            background-color: #a3e3ff;
+            height: 500px;
+            /* aside와 section을 가로로 배치해야하므로 main을 flex-container로 지정한다. */
+            display: flex;
+        }
+        .aside{
+            background-color: #b1ffa3;
+            width: 20%;
+        }
+        .section{
+            background-color: #fffaa3;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">header</div>
+        <div class="main">
+            <div class="aside">aside</div>
+            <div class="section">section</div>
+        </div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>
