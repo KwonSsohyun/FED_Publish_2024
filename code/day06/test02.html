@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* -------------------------------------------------------------------------- */
+        /* ★ 가상 클래스 선택자 */
+        a:link{
+            /* 아직 해당 링크를 방문하지 않은 상태를 의미 */
+            color: red;
+        }
+
+        a:visited{
+            /* 이미 해당 링크에 방문한 상태 */
+            color: black;
+        }
+
+        a:hover{
+            /* 마우스 커서를 올린 상태 */
+            color: yellowgreen;
+            text-decoration: none;
+        }
+
+        a:nth-child(3){
+            /* a 태그의 형제 태그들 중 3번째 a태그를 선택한다. */
+            font-size: 60px;
+        }
+
+        a:first-child{
+            /* a 태그의 형제 태그들 중 가장 첫번째 a태그를 선택한다. */
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        a:last-child{
+            /* a 태그의 형제 태그들 중 가장 마지막 a태그를 선택한다. */
+            font-size: 70px;
+        }
+
+        a:not(a:nth-child(2)){
+            /* a 태그의 형제 태그들 중 2번째 a태그를 제외한 나머지 요소들을 선택한다. */
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            <!-- target="_blank" | 새창을 열면서 링크에 접속 -->
+            <a href="test01.html" target="_blank">링크1</a>
+            <a href="aa.html">링크2</a>
+            <a href="">링크3</a>
+            <a href="">링크4</a>
+            <a href="">링크5</a>
+        </div>
+    </main>
+</body>
+</html>

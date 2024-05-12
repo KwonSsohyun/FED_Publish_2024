@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        main{background: gray; height: 1000px;}
+        div{width: 100px; height: 100px; border: 1px solid red; background-color: black; margin: 10px auto;}
+    
+        /* -------------------------------------------------------------------------- */
+        /* 애니메이션 효과 입히기 */
+        /* keyframes 정의 */
+        /* test라는 이름의 keyframes을 정의하겠다. */
+        @keyframes test {
+            from{
+                /* 애니메이션의 시작을 의미 */
+                background-color: gold;
+            }
+
+            50%{
+                background-color: blueviolet;
+            }
+
+            to{
+                /* 애니메이션의 종료를 의미 */
+                background-color: gold;
+            }
+        }
+        /* -------------------------------------------------------------------------- */
+
+        /* 요소에 애니메이션 적용 */
+        .div1{
+            animation-name: test;
+            /* 애니메이션의 실행시간을 2초로 설정한다. */
+            animation-duration: 2s;
+            /* 애니메이션의 반복횟수를 무한반복 설정한다. */
+            animation-iteration-count: infinite;
+            animation-delay: 0.5s;
+        }
+
+        /* -------------------------------------------------------------------------- */
+        .div2{
+            /* ▶ animation: 키프레임이름 반복횟수 듀레이션 딜레이 */
+            /* animation: test2 infinite 2s; */
+        }
+
+        .div2:hover{
+            /* animation: 키프레임이름 반복횟수 듀레이션 딜레이 */
+            animation: test2 infinite 2s;
+        }
+
+        @keyframes test2 {
+            0%{background-color: red;}
+            25%{background-color: rgba(255, 212, 20, 0.5);}
+            50%{background-color: rgb(130, 255, 20); border-radius: 50%; /*완전한 원*/}
+            75%{background-color: rgba(255, 212, 20, 0.5);}
+            100%{background-color: red; transform: rotate(365deg);}
+        }
+        /* -------------------------------------------------------------------------- */
+    </style>
+</head>
+<body>
+    <main>
+        <div class="div1">div1</div>
+        <div class="div2">div2</div>
+    </main>
+</body>
+</html>

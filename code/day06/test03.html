@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 가상 요소 선택자 */
+        /* li::first-letter{
+            color: red;
+        } */
+
+        li:nth-child(2)::first-line{
+            color: red;
+        }
+
+        li:last-child::after{
+            /* content : 새로 추가하는 요소의 내용, 요소의 내용으로 들어갈 컨텐츠를 큰따옴표로 감싸준다. */
+            content: "new";
+            color: white;
+            background-color: rgb(38, 0, 255);
+            font-size: 20px;
+            margin: 0; padding: 0;
+            border-radius: 10px;
+        }
+
+        li:last-child::before{
+            /* content : 새로 추가하는 요소의 내용, 요소의 내용으로 들어갈 컨텐츠를 큰따옴표로 감싸준다. */
+            content: "hot";
+            color: white;
+            background-color: rgb(204, 0, 34);
+            font-size: 20px;
+            margin: 0; padding: 0;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>가상 요소 선택자</h1>
+    <hr>
+
+    <main>
+        <ul>
+            <li>리스트1</li>
+            <li>리스트2</li>
+            <li>리스트3</li>
+        </ul>
+    </main>
+</body>
+</html>

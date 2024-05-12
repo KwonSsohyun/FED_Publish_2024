@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        main{background-color: black; height: 1000px;}
+        div{border: 1px solid gold; background-color: blueviolet; width: 100px; height: 100px; margin: 10px auto; text-align: center; line-height: 100px;}
+
+        .div1{
+            transition-property: width, height, background-color, font-weight;
+            /* 트랜지션이 진행되는 시간을 2초로 실행 */
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+            /* 3초 뒤에 트랜지션을 실행하겠다. */
+            transition-delay: 3s;
+        }
+
+        .div1:hover{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            font-weight: bold;
+        }
+
+        .div2{
+            transition: all 2s linear;
+        }
+
+        .div2:hover{
+            background-color: red;
+            width: 300px; height: 300px;
+        }
+
+        .div3{
+            transition: all 2s ease-in 2s;
+        }
+        .div3:hover{
+            background-color: blue;
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="div1">div1</div>
+        <div class="div2">div2</div>
+        <div class="div3">div3</div>
+    </main>
+</body>
+</html>
