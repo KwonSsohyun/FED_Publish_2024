@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background: #e6e6e6;}
+        h2{text-align: center; margin-top: 50px;}
+        .form_box{
+            border: 1px solid rgb(194, 194, 194);
+            background-color: white;
+            border-radius: 5px;
+            width: 50%;
+            height: 500px;
+            margin: 0 auto;
+            padding: 20px 20px;
+        }
+        label[for="name"],[for="id"],[for="pw"]{color: rgb(85, 85, 85); margin: 10px 0; display: block; font-weight: bold;}
+        input[type="text"],[type="password"]{border: 1px solid #b9b9b9; height: 25px; width: 90%; border-radius: 5px; margin-bottom: 10px;}
+        .chk_tit{color: rgb(85, 85, 85); margin-top: 20px; font-weight: bold;}
+        .chk_container{width: 90%;}
+        .chk_container > div{display: flex; justify-content: space-between; margin-bottom: 5px;}
+        .chk_container > div > label {color: rgb(117, 117, 117); text-decoration: underline; font-size: 15px;}
+        .submit_button{width: 90%; display: flex; justify-content: end; margin-top: 30px;}
+        input[type="submit"]{background-color: #8db5b6; color: white; border: none; width: 100px; height: 40px; border-radius: 5px; font-weight: bold;}
+        input[type="submit"]:hover{background-color: #27787a;}
+    </style>
+</head>
+<body>
+    <h2>환영합니다</h2>
+    <div class="form_box">
+        <form action="">
+            <label for="name">회원 이름</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="id">회원 아이디</label>
+            <input type="text" id="id" name="id" required>
+
+            <label for="pw">비밀번호</label>
+            <input type="password" id="pw" name="pw" required>
+
+            <div class="chk_container">
+                <div class="chk_tit">약관 동의</div>
+                <div>
+                    <label for="chk1">만 14세 이상입니다</label>
+                    <input type="checkbox" id="chk1" name="chk1">
+                </div>
+                <div>
+                    <label for="chk2">이용약관 동의</label>
+                    <input type="checkbox" id="chk2" name="chk2">
+                </div>
+                <div>
+                    <label for="chk3">개인정보 수집 및 이용 동의</label>
+                    <input type="checkbox" id="chk3" name="chk3">
+                </div>
+                <div>
+                    <label for="chk4">마케팅 알림 수신 동의</label>
+                    <input type="checkbox" id="chk4" name="chk4">
+                </div>
+            </div>
+            <div class="submit_button">
+                <input type="submit" value="가입완료" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>

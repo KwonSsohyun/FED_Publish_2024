@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            border: 3px solid pink;
+            border-radius: 25px;
+            text-align: center;
+            width: 700px;
+            margin: auto;
+        }
+        legend{font-size: 30px; font-weight: bold; padding: 0 20px;}
+        select{width: 130px; height: 25px; font-size: 15px;}
+        input[type="text"]{
+            margin-top: 20px;
+            margin-bottom: 7px;
+            width: 580px; height: 25px;
+            padding-left: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+        textarea{
+            padding: 10px;
+            border-radius: 10px;
+            resize: none; /* textarea 크기를 조절하지 못하게 한다. */
+        }
+        .submit_button > input{
+            width: 80px; height: 30px;
+            border: none;
+            background-color: lightcoral;
+            border-radius: 6px;
+            font-size: 15px; font-weight: bold;
+            color: rgb(0, 81, 255);
+            margin-right: 50px;
+        }
+        .submit_button{
+            display: flex;
+            justify-content: end;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>민원 신청</legend>
+            <label>지역을 선택하세요.</label>
+
+            <select name="address">
+                <option value="">선택안함</option>
+                <option value="서울">서울</option>
+                <option value="경기">경기</option>
+                <option value="인천">인천</option>
+                <option value="부산">부산</option>
+            </select>
+
+            <br>
+            <input type="text" name="title" placeholder="인풋창의 초기값 설정">
+
+            <br>
+            <textarea cols="80" rows="30" name="텍스트"></textarea>
+
+            <br>
+            <div class="submit_button">
+                <input type="submit" value="제출" />
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
