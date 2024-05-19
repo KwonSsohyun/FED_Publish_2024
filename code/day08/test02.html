@@ -9,16 +9,16 @@
         /* 헤더 영역 -------------------------------------------------------------------------- */
         body{margin: 0; padding: 0;}
         header{
-            height: 80px; background-color: #27787a; color: white; font-size: 20px;
+            height: 80px; background-color: #27787a; color: white; font-size: 25px; font-weight: bold;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 20px;
         }
         .hd_list{list-style: none; display: flex;}
-        .hd_list > li{margin-left: 30px; font-size: 15px;}
+        .hd_list > li{margin-left: 30px; font-size: 20px;}
         .hd_list > li > a {color: white; text-decoration-line: none;}
-        .hd_list > li > a:hover{color: rgb(255, 255, 255); font-weight: bold;}
+        .hd_list > li > a:hover{color: #7ed5d8; font-weight: bold;}
         /* 네브 영역 -------------------------------------------------------------------------- */
         nav{
             height: 60px; background-color: #5ab6b9; display: flex; align-items: center; 
@@ -27,22 +27,23 @@
         }
         .nav_list{list-style: none; display: flex; padding: 0;}
         .nav_list > li {margin-left: 20px;}
-        .nav_list > li > a{color: white; font-size: 15px; text-decoration: none;}
-        .nav_list > li > a:hover{color: #27787a; font-weight: bold;}
+        .nav_list > li > a{color: white; font-size: 20px; text-decoration: none; }
+        .nav_list > li > a:hover{color: #27787a;}
         /* 메인 영역 -------------------------------------------------------------------------- */
-        main{margin-bottom: 100px;}
+        main{margin-bottom: 100px; margin-top: 30px;}
         /* 섹션 01 */
         .section_01{margin-top: 20px; display: flex; justify-content: center; align-items: center;}
-        .section_01 > img {width: 95%; height: 500px; border-radius: 25px;}
+        .section_01 > img {width: 95%; height: 500px; border-radius: 25px; object-fit: cover;}
         /* 섹션 02 */
         .section_02{display: flex; margin-top: 0px;}
-        .S2_01{flex: 50%; padding: 40px 40px;}
+        .S2_01{flex: 50%; padding: 40px 40px; height: 100%;}
         .S2_02{flex: 50%; padding: 40px 40px;}
-        .S2_02 > article > img{display: block; width: 300px; height: 150px; border-radius: 10px;}
+        .S2_02 > article > img{display: block; width: 300px; height: 150px; border-radius: 10px; object-fit: cover;}
         .S2_02_art{display: flex;}
         .S2_02_art:nth-child(3) {margin-top: 20px;}
         .S2_02_art > div{margin-left: 20px;}
-        .S2_01>article> p {color: gray; font-size: 15px;}
+        .S2_01>div>article> p {color: gray; font-size: 15px;}
+        .S2_01>div{display: flex; flex-direction : column; justify-content: center;}
         .S2_02_art>div>h3{margin: 0;}
         /* 섹션 03 */
         .section_03{
@@ -51,6 +52,8 @@
         }
         .sec_list{
             display: flex; gap: 20px;
+            /* ★ Flex Items의 주 축(main-axis)을 설정하고 Items의 여러 줄 묶음(줄 바꿈)도 설정 */
+            flex-flow: row-reverse wrap;
             justify-content: space-around; align-items: center;
             padding: 0;
         }
@@ -59,14 +62,16 @@
             position: relative;
             list-style: none;
         }
-        .sec_list_li > img{
+        .sec_list_li>a> img{
             display: block; width: 400px; height: 450px; border-radius: 10px;
             transition: all 1s ease-out;
+            filter: brightness(0.5);
         }
-        .sec_list_li > img:hover{
+        .sec_list_li>a> img:hover{
             transform: scale(1.05, 1.05);
+            filter: brightness(1);
         }
-        .sec_list_li > p{
+        .sec_list_li>a> p{
             position: absolute;
             bottom: 10px;
             left: 20px;
@@ -75,7 +80,7 @@
         /* 푸터 영역 -------------------------------------------------------------------------- */
         footer{
             height: 80px; background-color: #27787a; padding: 20px 20px;
-            color: white; font-size: 20px; 
+            color: white; font-size: 25px; 
         }
     </style>
 </head>
@@ -84,7 +89,7 @@
         Final Project
         <div>
             <ul class="hd_list">
-                <li><a href="join.html">회원가입</a></li>
+                <li><a href="join.html" target='_blank'>회원가입</a></li>
                 <li><a href="">로그인</a></li>
             </ul>
         </div>
@@ -106,21 +111,23 @@
         <section class="section_02">
             <div class="S2_01">
                 <h2>Best 후기</h2>
-                <article>
-                    <h3>강원도 좋아요</h3>
-                    <p>이번 강원도 여행 정말 좋았어요</p>
-                    <hr>
-                </article>
-                <article>
-                    <h3>강원도 좋아요</h3>
-                    <p>이번 강원도 여행 정말 좋았어요</p>
-                    <hr>
-                </article>
-                <article>
-                    <h3>강원도 좋아요</h3>
-                    <p>이번 강원도 여행 정말 좋았어요</p>
-                    <hr>
-                </article>
+                <div>
+                    <article>
+                        <h3>강원도 좋아요</h3>
+                        <p>이번 강원도 여행 정말 좋았어요</p>
+                        <hr>
+                    </article>
+                    <article>
+                        <h3>부산 여행 리얼 후기</h3>
+                        <p>부산은 언제 졸러가도 질리지가 않아요</p>
+                        <hr>
+                    </article>
+                    <article>
+                        <h3>이번에 여수 여행을 다녀왔습니다</h3>
+                        <p>여수 밤바다 경치가 정말 좋아요</p>
+                        <hr>
+                    </article>
+                </div>
             </div>
             <div class="S2_02">
                 <h2>여행지 추천</h2>
@@ -144,20 +151,28 @@
             <h2>Event</h2>
             <ul class="sec_list">
                 <li class="sec_list_li">
-                    <img src="https://cdn.pixabay.com/photo/2022/08/26/07/57/tavern-7411977_1280.jpg"/>
-                    <p>여수 여행지 이벤트!</p>
+                    <a href="">
+                        <img src="https://cdn.pixabay.com/photo/2022/08/26/07/57/tavern-7411977_1280.jpg"/>
+                        <p>여수 여행지 이벤트!</p>
+                    </a>
                 </li>
                 <li class="sec_list_li">
-                    <img src="https://cdn.pixabay.com/photo/2022/08/26/07/57/tavern-7411977_1280.jpg"/>
-                    <p>이번 여행 강릉으로!</p>
+                    <a href="">
+                        <img src="https://cdn.pixabay.com/photo/2022/08/26/07/57/tavern-7411977_1280.jpg"/>
+                        <p>이번 여행 강릉으로!</p>
+                    </a>
                 </li>
                 <li class="sec_list_li">
-                    <img src="https://cdn.pixabay.com/photo/2022/08/26/07/57/tavern-7411977_1280.jpg"/>
-                    <p>부산 야경 이벤트!</p>
+                    <a href="">
+                        <img src="https://cdn.pixabay.com/photo/2022/08/26/07/57/tavern-7411977_1280.jpg"/>
+                        <p>부산 야경 이벤트!</p>
+                    </a>
                 </li>
                 <li class="sec_list_li">
-                    <img src="https://cdn.pixabay.com/photo/2022/08/26/07/57/tavern-7411977_1280.jpg"/>
-                    <p>해외 여행 이벤트!</p>
+                    <a href="">
+                        <img src="https://cdn.pixabay.com/photo/2022/08/26/07/57/tavern-7411977_1280.jpg"/>
+                        <p>해외 여행 이벤트!</p>
+                    </a>
                 </li>
             </ul>
         </section>
