@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test02</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <form action="">
+      <div>
+        <!-- input태그는 전부 value속성을 가지고 있는데 value속성값 = 입력받은 값 -->
+        id : <input type="text" name="id" />
+
+      </div>
+      <div>
+        <!-- label태그 : input태그로 입력받는 데이터의 설명을 작성하는 태그-->
+        <label>pw : </label> <input type="password" />
+      </div>
+      <div>
+        <label>date : </label> <input type="date" />
+      </div>
+
+      <div>
+        <input type="submit" value="보내기" />
+      </div>
+
+      <div>
+        <input type="reset" value="다시작성" />
+      </div>
+
+      <div>
+        <input type="file" />
+      </div>
+
+      <div>
+        <!-- 개발자가 직접적으로 원하는 데이터를 서버에 보내고 싶을때 사용-->
+        <input type="hidden" name="A" value="asdasdasd" />
+      </div>
+
+      <div>
+        오늘 점심 뭐먹지 :
+        <label>양식 </label> <input type="radio" value="양식" name="점심메뉴" />
+        <label>중식 </label> <input type="radio" value="중식" name="점심메뉴" />
+        <label>한식 </label> <input type="radio" value="한식" name="점심메뉴" />
+      </div>
+
+      <div>
+        오늘 저녁 뭐먹지 :
+        <!-- label for속성과 input의 id속성값을 매칭시켜줄 수 있다. (클릭 범위가 넓어진다.)-->
+        <label for="food">양식</label> <input type="checkbox" value="양식" name="저녁메뉴" id="food" />
+        <label>중식</label> <input type="checkbox" value="중식" name="저녁메뉴" checked />
+        <!-- checked속성 : 초기에 체크돼있는 상태로 보여준다-->
+        <label>한식</label> <input type="checkbox" value="한식" name="저녁메뉴" />
+      </div>
+    </form>
+  </main>
+
+</body>
+
+</html>

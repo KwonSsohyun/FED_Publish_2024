@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test07</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: cadetblue;
+      height: 50px;
+    }
+
+    ul {
+      display: flex;
+      height: 100%;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    li {
+      color: white;
+      font-size: 20px;
+      list-style-type: none;
+    }
+
+    section {
+      display: flex;
+      justify-content: center;
+    }
+
+    div {
+      background-color: blue;
+      width: 20vw;
+      height: 20vw;
+      margin: 10px;
+
+    }
+
+    /* 조건을 width : 800px 이라고 주게되면 웹페이지의 가로크기가 정확하게 800px이 될때만 아래 스타일이 적용된다
+    */
+    .nav2 {
+      display: none;
+    }
+
+    @media (max-width:800px) {
+
+      /*웹페이지의 최대 가로크기가 800px일때*/
+      section {
+        flex-wrap: wrap;
+      }
+
+      div {
+        background-color: blueviolet;
+        width: 40vw;
+        height: 40vw;
+      }
+
+      .nav1 {
+        display: none;
+      }
+
+      .nav2 {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <nav class="nav1">
+      <ul>
+        <li>HOME</li>
+        <li>상품구매</li>
+        <li>문의사항</li>
+        <li>후기</li>
+      </ul>
+    </nav>
+    <nav class="nav2">
+      <ul>
+        <li>뷰포트가 작아지면 보여줄 새로운 요소</li>
+      </ul>
+    </nav>
+
+    <section>
+      <div>요소1</div>
+      <div>요소2</div>
+      <div>요소3</div>
+      <div>요소4</div>
+    </section>
+  </main>
+
+</body>
+
+</html>
