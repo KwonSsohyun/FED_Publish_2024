@@ -82,6 +82,15 @@
             height: 80px; background-color: #27787a; padding: 20px 20px;
             color: white; font-size: 25px; 
         }
+        /* 미디어쿼리(Media Query) ------------------------------------------------------------- */
+        /* 뷰포트의 가로너비가 768픽셀 이하일 때만 적용 : 모바일 환경 */
+        @media screen and (max-width: 768px){ 
+            /* 섹션 02 */
+            .section_02{
+                /* ★ Flex Items의 주 축(main-axis)을 설정하고 Items의 여러 줄 묶음(줄 바꿈)도 설정 */
+                flex-flow: row-reverse wrap;
+            }
+        }
     </style>
 </head>
 <body>
