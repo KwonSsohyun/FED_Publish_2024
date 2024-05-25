@@ -1,203 +1,119 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>test01</title>
     <style>
         *{margin: 0; padding: 0;}
-        a{text-decoration: none;}
-        ul{list-style: none;}
-
-        /* head 스타일 */
-        header{height: 70px; padding: 10px; display: flex; justify-content: space-between; background-color: cadetblue; align-items: center;}
-        .header_logo{font-size: 25px; font-weight: bold; color: white;}
-        .header_list{display: flex;}
-        .header_list > li{font-size: 20px; font-weight: bold; margin: 0 15px;}
-        .header_list > li > a {color: white;}
-        .header_list > li > a:hover{color: rgba(128, 128, 128, 0.308);}
-
-        /* nav 스타일 */
-        nav{height: 50px; background-color: rgb(108, 183,187); position: sticky; top: 0;}
-        .nav_list{height: 100%; display: flex; align-items: center;}
-        .nav_list > li {font-size: 20px; margin: 0 15px;}
-        .nav_list > li > a {color: white; font-weight: bold;}
-        .nav_list > li > a:hover{font-size: 23px;}
-
-        /* main 스타일 */
-        main{height: 100%;}
-        /* 섹션 01 */
-        .main_banner{width: 100%; margin: 15px 0;}
-        .banner_img{
-            width: 95%; height: 400px; margin: 0 auto; border-radius: 15px; 
-            display: block; /* 이미지는 인라인요소이기 때문에 가로사이즈 조절과 마진이 안먹으니 블록요소 설정! */
+        body{background-color: #f9f7f7;}
+        h1{text-align: center; margin-bottom: 10px;}
+        main{padding: 100px;}
+        fieldset{
+            color: rgb(105,105,105);
+            width: 500px;
+            margin: auto;
+            padding: 40px;
+            background-color: white;
+            border-radius: 10px;
+            border: 1px solid rgb(228, 227, 227);
         }
-        /* 섹션 02 */
-        .main_content1{
-            width: 95%; height: 300px; 
-            margin: 0 auto;
-            display: flex;
+        ul{
+            list-style: none;
         }
-        .best_review_container{
-            width: 50%; /* 화면 가운데 영역만 차지 */
-        }
-        .review_list>li {margin-top: 20px; font-size: 18px;}
-        .review_list>li>h3{margin-bottom: 10px;}
-        .review_list>li>p{color: gray;}
-
-        .best_travel_container{
-            width: 50%;
-            margin-left: 15px;
-        }
-        .travel_list>li {width: 100%; height: 110px; display: flex; margin-bottom: 60px;}
-        .travel_list>li>img {
-            width: 500px; height: 150px; margin-right: 10px; border-radius: 10px;
-            /* 트랜지션 모션 적용 */
-            transition: all 1s ease-out;
-        }
-        .travel_list>li>img:hover{
-            /* 마우스 호버시 모션 적용 */
-            transform: scale(1.05, 1.05);
-        }
-
-        .best_travel_container>h1 {margin-bottom: 10px;}
-
-        /* 섹션 03 */
-        .main_content2{
-            width: 95%;
-            height: 100%;
-            margin: 70px auto;
-        }
-        .event_list {display: flex;}
-        .event_list > li {
-            margin: 20px auto;
-            /* 부모 */
-            position: relative;
-        }
-        .event_list > li > a > img{
-            width: 300px; height: 280px; border-radius: 20px;
-            transition: all 1s linear;
-        }
-        .event_list > li > a > img:hover{
-            transform: scale(1.05, 1.05);
-        }
-        .event_comment{
+        label{
+            /* label태그의 display속성이 원래 inline => block */
+            display: block;
             font-size: 20px;
+            margin-bottom: 10px;
+        }
+        li{
+            margin: 40px 0;
+        }
+        input[type="text"],[type="password"]{
+            width: 80%;
+            height: 40px;
+            border-radius: 10px;
+            border: 1px solid rgb(207,206,206);
+            font-size: 18px;
+            padding-left: 10px;
+        }
+        .checkbox_li  label{
+            /* inline-block : 컨텐츠 내용만큼만 크기를 차지해서 줄바꿈이 되지 않지만
+                                가로, 세로 크기를 지정할 수 있다.
+            */
+            display: inline-block;
+            width: 75%;
+        }
+        h3{margin-bottom: 10px;}
+        input[type="submit"]{
+            width: 130px;
+            height: 50px;
+            border: none;
+            background-color: antiquewhite;
+            border-radius: 10px;
+            font-size: 18px;
             font-weight: bold;
             color: white;
-            /* 나를 가지고 있는 부모 태그 중에 position 속성값이 static기본값이 아닌 애들을 찾고 
-                없다면 body태그를 기준으로 배치!!!
-                ★ 여기서는 부모가 ".event_list > li" 이다!!!
-            */
-            position: absolute;
-            top: 220px; left: 20px;
+            margin-right: 90px;
+            /* 요소 위에 마우스커서가 올라왔을 때 커서의 형태를 pointer형태로 바꿔준다. */
+            cursor: pointer;
+        }
+        input[type="submit"]:hover{
+            background-color: rgba(255, 181, 84, 0.808);
+        }
+        .submit_button{
+            width: 100%;
+            display: flex;
+            justify-content: end;
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <div class="header_logo">Final Project</div>
-        <div class="header_content">
-            <ul class="header_list">
-                <li><a href="join.html">회원가입</a></li>
-                <li><a href="">로그인</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <nav>
-        <ul class="nav_list">
-            <li><a href="">HOME</a></li>
-            <li><a href="">Service</a></li>
-            <li><a href="">Product</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Notice</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <section class="main_banner">
-            <img src="https://cdn.pixabay.com/photo/2017/08/31/05/57/sea-2699547_1280.jpg" class="banner_img">
-        </section>
-
-        <section class="main_content1">
-            <div class="best_review_container">
-                <h1>Best 후기</h1>
-                <ul class="review_list">
+        <h1>환영합니다</h1>
+        <form action="">
+            <fieldset>
+                <ul>
                     <li>
-                        <h3>강원도 좋아요</h3>
-                        <p>이번 강원도 여행 정말 좋았어요</p>
-                        <br>
-                        <hr>
+                        <!-- 입력요소의 클릭범위가 늘어난다. -->
+                        <label for="id1">회원 이름</label>
+                        <!-- required : 필수 입력란으로 설정하는 속성-->
+                        <input type="text" name="user_name" required id="id1"/>
                     </li>
                     <li>
-                        <h3>부산 여행 리얼 후기</h3>
-                        <p>부산은 언제 졸러가도 질리지가 않아요</p>
-                        <br>
-                        <hr>
+                        <label>회원 아이디</label>
+                        <input type="text" name="user_id" required />
                     </li>
                     <li>
-                        <h3>이번에 여수 여행을 다녀왔습니다.</h3>
-                        <p>여수 밤바다 경치가 정말 좋아요</p>
-                        <br>
-                        <hr>
+                        <label>비밀번호</label>
+                        <input type="password" name="user_password" required />
                     </li>
-                </ul>
-            </div>
-            <div class="best_travel_container">
-                <h1>여행지 추천</h1>
-                <ul class="travel_list">
-                    <li>
-                        <img src="https://cdn.pixabay.com/photo/2021/09/07/11/53/car-6603726_1280.jpg">
-                        <div class="travel_comment">
-                            <h3>프로 여행러들이 추천하는 여행지</h3>
-                            <p>올해 초 정말 여행가면 좋은 여행지 추천 추억을 쌓고 싶다면 봐주세요!</p>
-                        </div>
+                    <li class="checkbox_li">
+                        <h3>약관 동의</h3>
+                        <div class="align">
+                            <label for="id2"><ins>만 14세 이상입니다</ins></label>
+                            <input type="checkbox" name="agree" value="14세이상" id="id2"/>
+                            <br>
+                            <label><ins>이용약관 동의</ins></label>
+                            <input type="checkbox" name="agree" value="이용약관" />
+                            <br>
+                            <label><ins>개인정보 수집 및 이용 동의</ins></label>
+                            <input type="checkbox" name="agree" value="개인정보 동의" />
+                            <br>
+                            <label><ins>마케팅 알람 수신 동의</ins></label>
+                            <input type="checkbox" name="agree" value="마케팅 알람 동의" />
                     </li>
-                    <li>
-                        <img src="https://cdn.pixabay.com/photo/2021/09/07/11/53/car-6603726_1280.jpg">
-                        <div class="travel_comment">
-                            <h3>프로 여행러들이 추천하는 여행지</h3>
-                            <p>올해 초 정말 여행가면 좋은 여행지 추천 추억을 쌓고 싶다면 봐주세요!</p>
-                        </div>
+                    </div>
+                    <li class="submit_button">
+                        <input type="submit" value="가입완료" />
                     </li>
                 </ul>
-            </div>
-        </section>
-
-        <section class="main_content2">
-            <h1>Event</h1>
-            <ul class="event_list">
-                <li>
-                    <a href="">
-                        <img src="https://cdn.pixabay.com/photo/2022/08/26/07/57/tavern-7411977_1280.jpg"/>
-                        <p class="event_comment">여수 여행지 이벤트</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="https://cdn.pixabay.com/photo/2022/08/26/07/57/tavern-7411977_1280.jpg"/>
-                        <p class="event_comment">이번 여행 강릉으로!</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="https://cdn.pixabay.com/photo/2022/08/26/07/57/tavern-7411977_1280.jpg"/>
-                        <p class="event_comment">부산 야경 이벤트</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="https://cdn.pixabay.com/photo/2022/08/26/07/57/tavern-7411977_1280.jpg"/>
-                        <p class="event_comment">해외 여행 이벤트</p>
-                    </a>
-                </li>
-            </ul>
-
-        </section>
+            </fieldset>
+        </form>
     </main>
-
-    <footer></footer>
 </body>
+
 </html>
