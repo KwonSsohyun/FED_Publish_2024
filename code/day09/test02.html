@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div_class{
+            width: 200px; height: 200px;
+            margin: auto;
+            background-color: bisque;
+        }
+
+        div p { 
+            /* 구체성 점수 : 2점(태그 2개) */
+            /* 이건 구체적이지 않음 */
+            font-size: 10px;
+        }
+
+        .div_class .p_class{
+            /* 구체성 점수 : 20점(클래스 2개) */
+            font-size: 55px;
+        }
+
+        #div_id p {
+            /* 구체성 점수 : 101점(아이디+태그 2개) */
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        /* ★ 구체적으로 작성한 p태그 */
+        .div_class p {
+            /* 구체성 점수 : 11점(클래스+태그 2개) */
+            /* 이게 적용된다. */
+            font-size: 35px;
+        }
+        p{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>우선순위가 동일한 경우</h1>
+    <hr>
+    <div class="div_class" id="div_id">
+        <p class="p_class" id="p_id">컨텐츠</p>
+    </div>
+</body>
+</html>

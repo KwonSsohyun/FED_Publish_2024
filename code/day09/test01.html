@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* id선택자, class선택자, 태그 선택자 중에 어떤것이 우선 적용되는지 확인 */
+        #div_id{
+            /* id 선택자 */
+            width: 200px; height: 200px;
+            margin: auto;
+            line-height: 200px;
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            background-color: aqua;
+        }
+        .div_class{
+            /* class 선택자 
+                : id선택자 보다 낮으므로 배경색이 적용되지 않는다.
+            */
+            background-color: antiquewhite;
+        }
+
+        div{
+            /* 태그 선택자 
+                : class선택자 보다 낮으므로 배경색이 적용되지 않는다.
+            */
+            /* !important 키워드를 작성한 속성의 우선순위가 가장 높으므로 우선적용된다. */
+            background-color: blueviolet !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS 우선순위</h1>
+    <hr>
+    <!-- 인라인 스타일의 우선순위가 id선택자보다 높으므로 우선으로 적용된다. -->
+    <div id="div_id" class="div_class" style="background-color: brown;">컨텐츠</div>
+</body>
+</html>

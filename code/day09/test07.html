@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .container{
+            width: 100%; height: 800px;
+            background-color: blanchedalmond;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+
+            display: grid;
+            /* ★ grid areas 속성으로 각 영역의 이름을 지정하고 설정한 이름으로 배치를 진행할 수 있다. */
+            grid-template-areas:            /* ★ 3열(가로) 4행(세로) */
+                "header header header"      /* 1행(세로) */
+                "aside article1 article1"   /* 2행 */
+                "aside article2 article2"   /* 3행 */
+                "footer footer footer";     /* 4행 */
+
+            grid-template-rows: 1fr 2fr 2fr 1fr; /* 행(세로)크기 조절 */
+        }
+
+        header{
+            background-color: tomato;
+            /* ★ 영역 이름 지정 */
+            grid-area: header;
+        }
+        aside{
+            background-color: aquamarine;
+            /* ★ 영역 이름 지정 */
+            grid-area: aside;
+        }
+        .article01{
+            background-color: blue;
+            /* ★ 영역 이름 지정 */
+            grid-area: article1;
+        }
+        .article02{
+            background-color: blueviolet;
+            /* ★ 영역 이름 지정 */
+            grid-area: article2;
+        }
+        footer{
+            background-color: brown;
+            /* ★ 영역 이름 지정 */
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>header</header>
+        <aside>aside</aside>
+        <article class="article01">article 01</article>
+        <article class="article02">article 02</article>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

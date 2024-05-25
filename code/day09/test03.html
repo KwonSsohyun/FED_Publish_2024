@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 선택자가 동일하다면 나중에 작성한 CSS가 우선 적용된다. */
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            margin: auto;
+        }
+        div{
+            background-color: palevioletred;
+        }
+        .div_class{
+            background-color: purple;
+        }
+        .div_class{
+            /* 나중에 적용한게 먹는다. */
+            background-color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <div class="div_class">
+
+    </div>
+</body>
+</html>

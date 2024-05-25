@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .gird_container{
+            width: 600px; height: 500px;
+            background-color: beige;
+            margin: 50px auto;
+
+            /* ---------------------------------------------------------------------- */
+            /* ★ 각각의 아이템들을 grid로 배치하기 위한 grid-container 설정 */
+            display: grid;
+
+            /* ---------------------------------------------------------------------- */
+            /* ★ grid-template-columns => grid 열의 배치를 지정하는 속성 */
+            /* → 각 3개의 열을 가지는 그리드를 만들고 각 열의 크기는 가로 200px */
+            /* grid-template-columns: 200px 200px 200px; */
+
+            /* → 3열로 열당 1:1:1의 비율을 가져라 */
+            /* grid-template-columns: 1fr 2fr 1fr; */
+
+            /* 첫번째 열은 고정크기 100px을 가지고 나머지 가로크기를 1대1의 비율로 차지해라 */
+            /* grid-template-columns: 100px 1fr 1fr; */
+
+            /* repeat(열의 개수, 열의 가로 크기) */
+            grid-template-columns: repeat(3, 1fr);
+
+            /* ---------------------------------------------------------------------- */
+            /* ★ grid-template-rows : 그리드의 행배치를 지정하는 속성 */
+            /* → 그리드의 3행으로 행당 100px의 크기를 가져라 */
+            /* grid-template-rows: 100px 100px 100px; */
+
+            /* grid-template-rows: 1fr 1fr 1fr; */
+            grid-template-rows: repeat(3, 1fr);
+
+            /* ---------------------------------------------------------------------- */
+            /* ★ gap : 간격 
+                간격을 띄울때 그리드 컨테이너의 크기는 유지하고 "요소의 크기를 줄어들인다."
+            */
+            /* 행(세로) 열(가로) 간격 */
+            gap: 10px 20px;
+            gap: 20px;
+
+            /* 각 행(세로) 간의 간격 */
+            /* row-gap: 30px; */
+
+            /* 각 열(가로) 간의 간격 */
+            /* column-gap: 10px; */
+        }
+
+        .div{
+            border: 1px solid black;
+            background-color: palevioletred;
+            border-radius: 6px;
+            font-size: 25px;
+            padding: 20px;
+            font-weight: bold;
+            color: aliceblue;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>grid-container</h1>
+    <hr>
+    <main>
+        <div class="gird_container">
+            <div class="div">item1</div>
+            <div class="div">item2</div>
+            <div class="div">item3</div>
+            <div class="div">item4</div>
+            <div class="div">item5</div>
+            <div class="div">item6</div>
+        </div>
+    </main>
+</body>
+</html>
