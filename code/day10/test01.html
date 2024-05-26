@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드이름 배치 / 영역이름 배치</title>
+    <style>
+        h1{text-align:center;}
+        .container{
+            width: 600px; height: 800px;
+            background: antiquewhite;
+            margin: auto;
+
+            /* grid-container 설정 */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+
+            /* grid-template-areas : 그리드 이름으로 영역을 배치하는 속성 */
+            grid-template-areas:
+                "box1 box2 box3"
+                "box4 box5 box5"
+                "box4 box5 box5"
+                "box6 box6 box7"
+        }
+
+        .box1{background-color: aquamarine; grid-area: box1;}
+        .box2{background-color: blueviolet; grid-area: box2;}
+        .box3{background-color: brown; grid-area: box3;}
+        .box4{background-color: cadetblue; grid-area: box4;}
+        .box5{background-color: yellowgreen; grid-area: box5;}
+        .box6{background-color: green; grid-area: box6;}
+        .box7{background-color: palevioletred; grid-area: box7;}
+    </style>
+</head>
+<body>
+    <h1>영역이름으로 그리드 배치</h1>
+    <hr>
+    <div class="container">
+        <!-- div.box${컨텐츠 $}*7 -->
+        <div class="box1">컨텐츠 1</div>
+        <div class="box2">컨텐츠 2</div>
+        <div class="box3">컨텐츠 3</div>
+        <div class="box4">컨텐츠 4</div>
+        <div class="box5">컨텐츠 5</div>
+        <div class="box6">컨텐츠 6</div>
+        <div class="box7">컨텐츠 7</div>        
+    </div>
+</body>
+</html>

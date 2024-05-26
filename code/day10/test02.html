@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드이름 배치 / 영역이름 배치 (따라하기)</title>
+    <style>
+        /* Grid-container ▶ 부모 */
+        .container1{
+            display: grid;
+            /* 3행(세로) | 4열(가로) */
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+
+            width: 300px; height: 400px;
+            background-color: antiquewhite;
+            border: 3px solid black;
+        }
+        /* Grid-item ▶ 자식 */
+        .c1_box1{background-color: aquamarine; 
+            grid-column: 1/3;  /* 1번라인 ~ 3번라인까지 차지 */
+            grid-row: 1/3;
+        }
+        .c1_box2{background-color: blueviolet;
+            grid-column: 3/span 2; /* 3번째라인 ~ 2칸 차지 */
+        }
+        .c1_box3{background-color: brown;
+            grid-column: 3/span 2;
+            /* grid-row: 2/span 1; */
+        }
+        .c1_box4{background-color: cadetblue;}
+        .c1_box5{background-color: yellowgreen;}
+        .c1_box6{background-color: green;}
+        .c1_box7{background-color: palevioletred;}
+
+        /* ------------------------------------------------------------------ */
+        /* Grid-container ▶ 부모 */
+        .container2{
+            display: grid;
+            /* 3행(세로) | 3열(가로) */
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+
+            width: 300px; height: 400px;
+            background-color: antiquewhite;
+            border: 3px solid black;
+
+            grid-template-areas:
+            "item1 item2 item2"
+            "item3 item3 item3"
+            "item4 item5 item5"
+        }
+        /* Grid-item ▶ 자식 */
+        .c2_box1{background-color: aquamarine; grid-area: item1;}
+        .c2_box2{background-color: blueviolet; grid-area: item2;}
+        .c2_box3{background-color: brown; grid-area: item3;}
+        .c2_box4{background-color: cadetblue; grid-area: item4;}
+        .c2_box5{background-color: yellowgreen; grid-area: item5;}
+
+        /* ------------------------------------------------------------------ */
+        .container1 div{font-weight: bold;}
+        .container2 div{font-weight: bold;}
+    </style>
+</head>
+<body>
+    <h1>Grid로 레이아웃을 배치해보자</h1>
+    <h3>1) 라인번호 기반 배치</h3>
+    <div class="container1">
+        <div class="c1_box1">item1</div>
+        <div class="c1_box2">item2</div>
+        <div class="c1_box3">item3</div>
+        <div class="c1_box4">item4</div>
+        <div class="c1_box5">item5</div>
+        <div class="c1_box6">item6</div>
+        <div class="c1_box7">item7</div>        
+    </div>
+    
+    <br>
+
+    <h3>2) grid-area명으로 배치</h3>
+    <div class="container2">
+        <div class="c2_box1">One</div>
+        <div class="c2_box2">Two</div>
+        <div class="c2_box3">Three</div>
+        <div class="c2_box4">Four</div>
+        <div class="c2_box5">Five</div>    
+    </div>
+</body>
+</html>
