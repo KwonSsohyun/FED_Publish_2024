@@ -19,6 +19,6 @@
 |`4 week`| Day 5 | 24.05.11 | • Position 속성(relative, absolute, fixed, sticky) <br>• Z-index 속성 |
 |`4 week`| Day 6 | 24.05.12 | • CSS 선택자(연결, 속성, 가상 선택자) <br>• CSS 애니메이션(Transform, Transition, Animation) |
 |`5 week`| Day 7 | 24.05.18 | • 폼(Form) 태그 <br>• 뷰포트(vw, vh) <br>• 미디어쿼리(@media (조건문) { 실행코드 }) |
-|`5 week`| Day 8 | 24.05.19 | <a href="https://github.com/KwonSsohyun/FED_Publish_2024/issues/1" target="_blank">• 웹 퍼블리싱 실습</a> |
+|`5 week`| Day 8 | 24.05.19 | [• 웹 퍼블리싱 실습](https://github.com/KwonSsohyun/FED_Publish_2024/issues/1) |
 |`6 week`| Day 9 | 24.05.25 | • CSS 적용 우선순위 <br>• CSS 그리드(Grid) 레이아웃 |
-|`6 week`| Day 10 | 24.05.26 | • CSS 그리드(Grid) 레이아웃 <br><a href="https://github.com/KwonSsohyun/FED_Publish_2024/issues/2" target="_blank">• 그리드(Grid) 실습</a> <br>• 그림자(box-shadow) <br>• 배경 이미지(background-image) |
+|`6 week`| Day 10 | 24.05.26 | • CSS 그리드(Grid) 레이아웃 <br>[• 그리드(Grid) 실습](https://github.com/KwonSsohyun/FED_Publish_2024/issues/2) <br>• 그림자(box-shadow) <br>• 배경 이미지(background-image) |
