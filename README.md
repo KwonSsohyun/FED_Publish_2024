@@ -22,3 +22,4 @@
 |`5 week`| Day 8 | 24.05.19 | [• 반응형 레이아웃(Flex, Position) 실습](https://github.com/KwonSsohyun/FED_Publish_2024/issues/1) |
 |`6 week`| Day 9 | 24.05.25 | • CSS 적용 우선순위 <br>• CSS 그리드(Grid) 레이아웃 |
 |`6 week`| Day 10 | 24.05.26 | • CSS 그리드(Grid) 레이아웃 <br>[• 그리드 레이아웃(Grid) 실습](https://github.com/KwonSsohyun/FED_Publish_2024/issues/2) <br>• 그림자(box-shadow) <br>• 배경 이미지(background-image) |
+|`7 week`| Day 11 | 24.06.01 | • JavaScript 개요 <br>• 변수(var, let)·상수(const) <br>• 자료형(number, string, boolean, undefined, null) <br>• 객체(Object) <br>• 템플릿문자열 <code>\`${변수명}\`</code> <br>• 호이스팅(Hoisting) |
