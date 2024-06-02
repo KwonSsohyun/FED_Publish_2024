@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+            [🔒문제]
+                <코인노래방 프로그램 만들기>
+                코인노래방에서 노래 한곡 당 가격은 300원이다.
+                Prompt함수로 사용자에게 사용할 금액을 입력받는다.
+                입력받은 금액으로 부를 수 있는 곡의 개수와 잔돈을
+                웹페이지상에 제목 태그로 출력한다.
+
+            [📝출력]
+                0곡을 부를 수 있습니다.
+                잔돈은 0원 입니다.
+        */
+        // 🔑Code
+        let money = prompt("금액을 입력하세요.");
+
+        // parseInt() : 소괄호 안에 들어온 값을 정수형 데이터로 바꿔준다.
+        let count = parseInt(money/300); // 곡
+        let changes = parseInt(money%300); // 잔돈
+
+        with(document){
+            write(`<h1>${count}곡을 부를 수 있습니다.</h1><h3>잔돈은 ${changes}원 입니다.</h3>`);
+        }
+
+    </script>
+</body>
+</html>
