@@ -24,3 +24,4 @@
 |`6 week`| Day 10 | 24.05.26 | • CSS 그리드(Grid) 레이아웃 <br>[• 그리드 레이아웃(Grid) 실습](https://github.com/KwonSsohyun/FED_Publish_2024/issues/2) <br>• 그림자(box-shadow) <br>• 배경 이미지(background-image) |
 |`7 week`| Day 11 | 24.06.01 | • JavaScript 개요 <br>• 변수(var, let)·상수(const) <br>• 자료형(number, string, boolean, undefined, null) <br>• 객체(Object) <br>• 템플릿문자열 <code>\`${변수명}\`</code> <br>• 호이스팅(Hoisting) |
 |`7 week`| Day 12 | 24.06.02 | • 제어문자(\n \t \\" \\' \\\\) <br>• 형변환(강제 형변환 parseInt(), 자동 형변환) <br>• 연산자(산술, 관계, 논리, 삼항, 대입, 복합대입) <br>• document.write() <br>• with(document){} <br>• alert() <br>• confirm() <br>• prompt() |
+|`8 week`| Day 13 | 24.06.08 | • 제어문(조건문, 반복문, 보조(기타)) <br>• 조건문(if~ else if~ else문, switch~ case문) <br>• 반복문(for문, while문, do~ while문) <br>• 보조(기타) 제어문(continue문, break문) |
