@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+            [🔒문제]
+                사용자로부터 웹문서상에서
+                봄, 여름, 가을, 겨울 중에 하나의 문자열을 입력받는다.
+                입력받은 계절에 따라 문구가 나온다.
+
+            [📝출력]
+                봄 : 봄에는 벚꽃이 핍니다.
+                여름 : 여름에는 바다에 놀러갑니다.
+                가을 : 가을에는 단풍구경 갑니다.
+                겨울 : 겨울에는 스키장에 놀러갑니다.
+                * 사용자가 계절중에 하나를 입력하지 않았다면
+                    "입력이 잘못되었습니다" 라는 경고창(alert()) 노출
+                    웹 문서상에도 "입력이 잘못되었습니다" 출력
+        */
+        // 🔑Code
+        let input = prompt("계절입력 / 봄, 여름, 가을, 겨울");
+
+        // create element
+        const NewElement = document.createElement('h1');
+        let node;
+
+        switch(input){
+            case "봄" :
+                node = document.createTextNode("봄에는 벚꽃이 핍니다.");
+                break;
+            
+            case "여름" :
+                node = document.createTextNode("여름에는 바다에 놀러갑니다.");
+                break;
+
+            case "가을" :
+                node = document.createTextNode("가을에는 단풍구경 갑니다.");
+                break;
+
+            case "겨울" :
+                node = document.createTextNode("겨울에는 스키장에 놀러갑니다.");
+                break;
+
+            default :
+                node = document.createTextNode("입력이 잘못되었습니다.");
+                alert("입력이 잘못되었습니다.");
+                break;
+        }
+
+        NewElement.appendChild(node);
+        document.body.appendChild(NewElement);
+    </script>
+</body>
+</html>

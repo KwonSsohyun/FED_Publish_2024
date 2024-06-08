@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>성적 관리 프로그램</h1>
+    <h3 id="s_name">학생 이름 : </h3>
+    <h3 id="s_score">자바스크립트 점수 : </h3>
+    <h3 id="s_grade">학점 : </h3>
+
+    <script>
+        /* 
+            [🔒문제]
+                웹페이지에서 학생의 이름과 자바스크립트 점수를 입력받아
+                입력받은 자바스크립트 점수가
+                90점 이상 → A학점
+                80점 이상 → B학점
+                70점 이상 → C학점
+                60점 이상 → D학점
+                60점 미만 → F학점
+
+            [📝출력]
+                학생 이름 입력
+                자바스크립트 점수 입력
+                화면에 해당하는 학점 출력
+        */
+        // 🔑Code
+        let name = prompt("학생이름 입력");
+        let score = prompt("점수 입력");
+        let grade; // 학점 등급
+
+        console.log(s_name, score);
+
+        if(score >= 90){
+            grade = "A학점";
+        } else if(score >= 80){
+            grade = "B학점";
+        } else if(score >= 70){
+            grade = "C학점";
+        } else if(score >= 60){
+            grade = "D학점";
+        } else{
+            grade = "F학점";
+        }
+
+        document.getElementById("s_name").innerText = document.getElementById("s_name").innerText + name;
+        document.getElementById("s_score").innerHTML = document.getElementById("s_score").innerText + score;
+        document.getElementById("s_grade").innerHTML = document.getElementById("s_grade").innerText + grade;
+    </script>
+</body>
+</html>
