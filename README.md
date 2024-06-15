@@ -26,3 +26,4 @@
 |`7 week`| Day 12 | 24.06.02 | • 제어문자(\n \t \\" \\' \\\\) <br>• 형변환(강제 형변환 parseInt(), 자동 형변환) <br>• 연산자(산술, 관계, 논리, 삼항, 대입, 복합대입) <br>• document.write() <br>• with(document){} <br>• alert() <br>• confirm() <br>• prompt() |
 |`8 week`| Day 13 | 24.06.08 | • 제어문(조건문, 반복문, 보조(기타)) <br>• 조건문(if~ else if~ else문, switch~ case문) <br>• 반복문(for문, while문, do~ while문) <br>• 보조(기타) 제어문(continue문, break문) |
 |`8 week`| Day 14 | 24.06.09 | • 함수(Function) <br>• 함수 표현식(익명함수, 화살표함수) <br>• 객체(Object : 프로퍼티(속성), 메서드(기능)) |
+|`9 week`| Day 15 | 24.06.15 | • 객체(Object : 속성(property), 메서드(method)) <br>• 객체 프로퍼티 접근(객체명.key값, 객체명['key값']) <br>• 객체 사용(추가, 삭제) <br>• 객체 반복문(for...in) <br>• 객체 생성자 함수(new Object()) <br>• 배열 객체(Array) <br>• 배열 선언([], new Array()) <br>• 배열 사용(추가, 삭제) <br>• 배열 메서드 <br>• 콜백 함수(Callback Function) <br>• 이벤트(Event) |
