@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript 이벤트(Event)</h1>
+    <!-- 
+        사용자가 일으킨 이벤트에 따라 자바스크립트 코드 실행
+        이벤트를 처리하기 위해 onXXX 속성을 사용한다.
+        ex) onclick, onmouseover 등
+
+        onXXX속성의 속성값으로는 자바스크립트 명령어를 작성한다.
+    -->
+
+    <!-- 버튼1 클릭 ▶ alert창이 나오도록 설정 -->
+    <button type="button" onclick="alert('버튼1 클릭했습니다.')">버튼1</button>
+
+    <!-- 버튼2 클릭 ▶ test()함수를 호출하도록 설정 -->
+    <button type="button" onclick="test()">버튼2</button>
+
+    <!-- 버튼3 클릭 ▶ test2()함수를 호출하도록 설정 -->
+    <button type="button" onclick="test2()">버튼3</button>
+
+    <!-- div요소에 
+        마우스커서가 올라오면 body의 배경색을 yellow로 바꿔라 
+        마우스커서가 벗어나면 body의 배경색을 white로 바꿔라
+    -->
+    <div onmouseover="body.style.background='yellow'" onmouseout="body.style.background='white'">마우스를 올려보세요!</div>
+
+    <script>
+        // test 함수 정의
+        function test(){
+            alert("test 함수를 호출하였습니다!");
+        }
+
+        // test2 함수 정의
+        function test2(){
+            if(confirm("정말로 삭제하시겠습니까?")){
+                alert("삭제 완료!");
+            } else{
+                alert("삭제 취소!");
+            }
+        }
+    </script>
+</body>
+</html>
