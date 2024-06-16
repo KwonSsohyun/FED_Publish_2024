@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv">Div요소</div>
+    <p></p>
+</body>
+
+<script>
+    // 웹문서상에 아이디가 myDiv인 요소를 객체로 가져와서 변수에 담아준다.
+    let myDiv = document.getElementById("myDiv");
+    console.log(myDiv);     // <div id="myDiv">Div요소</div>
+
+    // 웹 문서상에 p태그 요소를 객체로 가져와서 변수 p1에 저장한다.
+    let p1 = document.querySelector("p");
+    console.log(p1);        // <p></p>
+
+    // innerText : 해당 요소가 가지고 있는 내용중에 텍스트를 의미한다.
+    // → myDiv가 가지고 있는 텍스트를 p1의 텍스트로 대입하겠다.
+    p1.innerText = myDiv.innerText;     // Div요소 → p태그 안에 "Div요소" 텍스트 대입
+</script>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- div.box{}*4 -->
+    <div class="box" id="click"></div>
+    <div class="box" id="over"></div>
+    <div class="box" id="out"></div>
+    <div class="box" id="over-out"></div>
+</body>
+
+<script>
+    // box요소 전부 다 객체로 가져오기
+    let boxClick = document.getElementById("click");
+    let boxOver = document.getElementById("over");
+    let boxOut = document.querySelector("#out");
+    let boxOverOut = document.querySelector("#over-out");
+
+
+    // ▷ 요소의 배경색을 초록색으로 바꿔주는 함수
+    function changeBgGreen(){
+        // 이 함수를 "호출하는 객체가 this"에 자동 들어간다.
+        this.style.backgroundColor = "green";
+    }
+
+
+    // ▶ 이벤트 핸들러 설정
+    //    addEventListener : 이벤트 핸들러를 설정할 때 유용한 메서드
+    boxClick.addEventListener("click", changeBgGreen);
+
+    // 이벤트 핸들러의 함수 부분을 익명함수로 작성가능
+    boxOver.addEventListener("mouseover", function(){
+        // 콜백함수를 받는 메서드
+        this.style.backgroundColor = "red";
+    });
+
+    function changeBgBlue(){
+        this.style.backgroundColor = "blue";
+    }
+    boxOut.addEventListener("mouseout", changeBgBlue);
+
+    // 여러개 설정
+    boxOverOut.addEventListener("mouseover",changeBgGreen);
+    boxOverOut.addEventListener("mouseout",changeBgBlue);
+
+</script>
+
+</html>

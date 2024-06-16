@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모달창</title>
+    <style>
+        *{ margin: 0; padding: 0; }
+        body{ background-color: antiquewhite; }
+
+        .main-section{
+            width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            display: none;
+        }
+        article{
+            position: absolute;
+            width: 700px; height: 500px;
+            background-color: white;
+            display: flex;
+            border-radius: 10px;
+        }
+        .login{
+            width: 50%; height: 50%;
+            padding: 20px; margin: auto;
+            display: flex;
+            /* 주축을 세로방향으로 설정 */
+            flex-direction: column;
+        }
+        article h1{ margin: 0 0 20px 20px;}
+        article label{ font-size: 18px; }
+        article input{ width: 70%; height: 30px; border-radius: 7px; margin-bottom: 15px; }
+        .login-img{ width: 50%; height: 100%; }
+        .xBox{
+            margin-top: 30px; 
+            width: 45px; height: 30px; 
+            text-align: center; line-height: 30px; font-size: 15px; font-weight: bold;
+            background-color: bisque;
+            cursor: pointer;
+            border-radius: 7px;
+        }
+        button{
+            width: 100px; height: 50px;
+            font-size: 20px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- 모달창 -->
+    <!-- 요소만 우선 만들어놓고, 안보이게 하고 자바스크립트에서 보이게 하기 -->
+    <section class="main-section">
+        <article>
+            <div class="login">
+                <h1>로그인</h1>
+                <label>아이디</label> <input type="text"/>
+                <label>비밀번호</label> <input type="password"/>
+                <div class="xBox">닫기</div>
+            </div>
+            <img src="https://cdn.pixabay.com/photo/2019/06/09/21/54/santorini-4263036_640.jpg" class="login-img" />
+        </article>
+    </section>
+
+    <button class="login-btn" type="button">로그인</button>
+</body>
+
+<script>
+    let loginBtn = document.querySelector(".login-btn");
+    let modal = document.querySelector(".main-section");
+    let xBox = document.querySelector(".xBox");
+
+    // [실습]
+    // loginBtn을 클릭하면 modal에 display 속성을 flex로 설정한다.
+    // xBox modal에 display 속성을 none로 설정한다.
+
+    // → loginBtn 버튼을 클릭했을 때 modal의 display 속성을 flex로 바꿔라
+    loginBtn.addEventListener("click", function(){
+        modal.style.display = "flex";
+    });
+
+    // → xBox 버튼을 클릭했을 때 modal의 display 속성을 none로 설정
+    xBox.addEventListener("click", ()=>{
+        modal.style.display = "none";
+    });
+</script>
+
+</html>

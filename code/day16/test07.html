@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div-box{
+            width: 100px; height: 100px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">DOM 활용하기</h1>
+    <div class="div-box div-border" id="bg-green"></div>
+    <div class="div-box div-border" id="bg-red"></div>
+    <div class="div-box" id="bg-yellow"></div>
+</body>
+
+<script>
+    // HTML요소를 id로 가져오기
+    let title = document.getElementById("title");
+
+    // HTML요소를 class로 가져오기
+    let divBox = document.getElementsByClassName("div-box");
+
+    // 가져온 요소 중에서 특정 요소만 사용하고 싶다면 인덱스로 꺼내온다.
+    console.log(divBox[1]);
+
+    // querySelector()를 사용하여 요소 가져오기
+    let bgGreen = document.querySelector("#bg-green");
+
+    // querySelectorAll()를 사용하여 여러 요소 가져오기
+    let divBorder = document.querySelectorAll(".div-border");
+
+    // 가져온 요소의 내용 중 텍스트만 가져오기
+    console.log(title.innerText);
+
+    // 요소의 내용을 수정
+    title.innerText = "innerText 사용!"
+
+    // innerHTML 요소 내용 수정
+    title.innerHTML = "<i>innerHTML 사용!</i>"
+
+    // 요소의 특정 속성값 가져오기
+    console.log(bgGreen.getAttribute("class")); // div-box div-border
+
+    // 요소의 속성 변경하기
+    // bgGreen요소의 배경색을 초록색으로 설정
+    bgGreen.setAttribute("style","background : green");
+
+    document.querySelector("#bg-red").setAttribute("style","background : red");
+    document.querySelector("#bg-yellow").setAttribute("style", "background : yellow");
+
+
+    // [실습] : div-border 클래스명을 가진 요소들의
+    //          border속성을 2px solid black 설정
+    //          border-radius를 10px 둥글게 만들기
+    // ★ 배열의 형태니까, 인덱스번호로 꺼내와서 적용해 주어야 한다.
+    //    
+    for(let i=0; i<divBorder.length; i++){
+        // ★ setAttribute() → 기존의 가지고 있던 style은 없애버린다.
+        // divBorder[i].setAttribute("style", "border : 2px solid black; border-radius : 10px");
+
+        // ★ style 속성을 쓰면 기존 style에 추가해준다.
+        divBorder[i].style.border = "2px solid black";
+        divBorder[i].style.borderRadius = "10px";
+    }
+    
+</script>
+
+</html>

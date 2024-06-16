@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM 연습</h1>
+    <p>p태그는 구문태그</p>
+    <!-- div{div태그 $번째}*5 -->
+    <div>div태그 1번째</div>
+    <div>div태그 2번째</div>
+    <div>div태그 3번째</div>
+    <div>div태그 4번째</div>
+    <div>div태그 5번째</div>
+</body>
+
+<script>
+    // ▶ getElementsByTagName()
+    //    태그 이름으로 요소를 가져오는 메서드 - "배열"로 가져옴
+    //    요소가 한개있어도 배열로 가져온다. (요소 1개가 저장된 배열로 가져온다.)
+    let result = document.getElementsByTagName("div");
+
+    // ▶ 가져온 요소가 가진 텍스트 콘솔창에 출력
+    for(let i=0; i<result.length; i++){
+        console.log(result[i].innerText);
+    }
+</script>
+
+</html>

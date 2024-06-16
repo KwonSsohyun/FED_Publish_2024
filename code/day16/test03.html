@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="myDiv">1번째 div 태그</div>
+    <div class="myDiv">2번째 div 태그</div>
+    <div>3번째 div 태그</div>
+</body>
+
+<script>
+    // ▶ 클래스 이름으로 요소 가져오기
+    //    클래스 이름은 웹 문서상에 여러개 존재할 수 있으므로
+    //    클래스 이름이 myDiv인 요소들을 전부 객체로 가져와서, "배열"로 반환한다.
+    let div = document.getElementsByClassName("myDiv");
+    console.log(div);
+    /*
+        <"배열"로 반환>
+            0: div.myDiv
+            1: div.myDiv
+            length: 2
+    */
+
+    // ▶ 배열 안에 저장된 div요소가 가진 텍스트 출력
+    // console.log(div[0].innerText);  //  1번째 div 태그
+    // console.log(div[1].innerText);  //  2번째 div 태그
+    for(let i=0; i<div.length; i++){
+        console.log(div[i].innerText);
+    }
+
+</script>
+
+</html>

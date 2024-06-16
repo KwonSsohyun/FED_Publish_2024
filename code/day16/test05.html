@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv_id" class="myDiv">
+        <p>div 태그 안의 p태그 입니다.</p>
+    </div>
+
+    <div class="myDiv">
+        <span>div 태그 안의 span태그 입니다.</span>
+    </div>
+</body>
+
+<script>
+    // ▶ querySelector("#아이디명")
+    // let result = document.querySelector("#myDiv_id");
+    // console.log(result.innerText);      // div 태그 안의 p태그 입니다.
+
+
+    // ▶ querySelector(".클래스명")
+    //    첫 번째 클래스 이름이 myDiv인 요소만 객체로 가져온다.
+    // let result = document.querySelector(".myDiv");
+    // console.log(result.innerText);         // div 태그 안의 p태그 입니다.
+
+
+    // ▶ querySelectorAll(".클래스명")
+    //    여러개의 요소를 배열의 형태로 가저온다.
+    let result = document.querySelectorAll(".myDiv");
+    console.log(result[0].innerText);   // div 태그 안의 p태그 입니다.
+    console.log(result[1].innerText);   // div 태그 안의 span태그 입니다.
+</script>
+
+</html>
