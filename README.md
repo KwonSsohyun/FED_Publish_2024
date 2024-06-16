@@ -27,4 +27,4 @@
 |`8 week`| Day 13 | 24.06.08 | • 제어문(조건문, 반복문, 보조(기타)) <br>• 조건문(if~ else if~ else문, switch~ case문) <br>• 반복문(for문, while문, do~ while문) <br>• 보조(기타) 제어문(continue문, break문) |
 |`8 week`| Day 14 | 24.06.09 | • 함수(Function) <br>• 함수 표현식(익명함수, 화살표함수) <br>• 객체(Object : 프로퍼티(속성), 메서드(기능)) |
 |`9 week`| Day 15 | 24.06.15 | • 객체(Object : 속성(property), 메서드(method)) <br>• 객체 프로퍼티 접근(객체명.key값, 객체명['key값']) <br>• 객체 사용(추가, 삭제) <br>• 객체 반복문(for...in) <br>• 객체 생성자 함수(new Object()) <br>• 배열 객체(Array) <br>• 배열 선언([], new Array()) <br>• 배열 사용(추가, 삭제) <br>• 배열 메서드 <br>• 콜백 함수(Callback Function) <br>• 이벤트(Event) |
-|`9 week`| Day 16 | 24.06.16 | • 문서 객체 모델(DOM) <br>• DOM Tree 구성요소 <br>• DOM 객체 접근 메서드(HTML요소-노드 선택) <br>• DOM 조작(HTML요소-노드 생성/수정/제거) <br>• HTML요소 이벤트 핸들러(HTML요소 속성, DOM요소 프로퍼티, addEventListener 메서드) <br>• 라이트박스 팝업 구현(Light Box) <br>• 모달창 팝업 구현(Modal) |
+|`9 week`| Day 16 | 24.06.16 | • 문서 객체 모델(DOM) <br>• DOM Tree 구성요소 <br>• DOM 객체 접근 메서드(HTML요소-노드 선택) <br>• DOM 조작(HTML요소-노드 생성/수정/제거) <br>• HTML 요소 이벤트 핸들러 <br>• 라이트박스 팝업 구현(Light Box) <br>• 모달창 팝업 구현(Modal) |
